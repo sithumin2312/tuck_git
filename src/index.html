@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Cards</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;800&family=Noto+Serif+Myanmar:wght@500&family=Nunito:wght@500;600&family=PT+Sans:ital@1&family=Poppins:ital,wght@1,500&family=Roboto:ital,wght@0,500;1,500&family=Titillium+Web:wght@400;700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="">
+    <!-- ----NAV BAR & Hero Section----- -->
+    <section>
+
+        <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between sticky top-0">
+            <div class="flex justify-between items-center ">
+                <span class="text-3xl cursor-pointer container mx-auto text-primary">
+                    <i class="fa-solid fa-book"></i>
+                    eLEARNING
+                </span>
+
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
+            </div>
+
+            <ul
+                class=" md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-100 top-[-400px] transition-all ease-in duration-500">
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="font-bold hover:text-primary duration-500">HOME</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="font-bold hover:text-primary duration-500">ABOUT</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="font-bold hover:text-primary duration-500">COURSE</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#" class="font-bold hover:text-primary duration-500">CONTACT</a>
+                </li>
+
+
+                <button class="bg-primary text-white  duration-500 px-6 py-2 mx-4 rounded ">
+                    Join Now
+                </button>
+            </ul>
+        </nav>
+
+
+        <div class="w-full bg-center bg-cover "
+            style="background-image: url(https://demo.htmlcodex.com/2151/elearning-html-template/img/carousel-2.jpg);">
+            <div class="absolute top-0 start-0 w-100 h-100 flex items-center"
+                style="background: rgba(24, 29,  56, .7);">
+            </div>
+            <div class="flex items-center justify-center w-full h-full bg-blue-900 bg-opacity-50 ">
+                <div class="container mx-auto">
+                    <div class="container row-auto justify-start mx-auto py-64 ">
+                        <div class=" mx-auto ">
+                            <h3 class="text-primary md:text-3xl mb-3">BEST ONLINE
+                                COURSES</h3>
+                            <h2 class="text-6xl md:text-6xl font-bold text-white">Get Educated Online <br> From Your
+                                Home.</h2>
+                            <p class=" mx-auto mb-7 pb-2  text-white">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, illo. Dolorem
+                                voluptatum nulla repellendus quae, vel eum cupiditate vero reiciendis placeat rerum?
+                                Aperiam rem delectus sequi libero necessitatibus? Itaque, tempora.
+                            </p>
+
+                            <a href="#" class="text-white bg-primary py-5 px-9 ">Read More</a>
+                            <a href="#" class="text-black bg-white py-5 px-9">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+        function Menu(e) {
+            let list = document.querySelector('ul');
+            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+        }
+    </script>
+
+    <!-- ---------Mini Card------- -->
+    <section>
+        <div class="mt-24 container mx-auto">
+            <div class=" flex items-center justify-center mt-16 container mx-auto">
+                <!-- -------GRID---- -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <!-- ------CARD----- -->
+
+                    <div
+                        class="hover:bg-sky-400  bg-white shadow-lg border text-center  py-6 px-5  hover:ring-sky-400 ring-slate-900  rounded-lg hover:-translate-y-4 transition-all duration-300">
+                        <div class="text-gray-700 hover:text-white">
+                            <i class="fa-solid fa-graduation-cap  fa-3x mb-4 "></i>
+                            <h3 class="mb-3 text-lg">Skilled Instructors</h3>
+                            <p>Diam elitr kased sed at elitr sed ipsum justo dolar sed clita amet diam</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="hover:bg-sky-400  bg-white shadow-lg border text-center  py-6 px-5  hover:ring-sky-400 ring-slate-900  rounded-lg hover:-translate-y-4 transition-all duration-300">
+                        <div class="text-gray-700 hover:text-white">
+                            <i class="fa-solid fa-globe  fa-3x mb-4 "></i>
+                            <h3 class="mb-3 text-lg">Online Class</h3>
+                            <p>Diam elitr kased sed at elitr sed ipsum justo dolar sed clita amet diam</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="hover:bg-sky-400  bg-white shadow-lg border text-center  py-6 px-5  hover:ring-sky-400 ring-slate-900  rounded-lg hover:-translate-y-4 transition-all duration-300">
+                        <div class="text-gray-700 hover:text-white">
+                            <i class="fa-solid fa-house-chimney  fa-3x mb-4 "></i>
+                            <h3 class="mb-3 text-lg">Home Project</h3>
+                            <p>Diam elitr kased sed at elitr sed ipsum justo dolar sed clita amet diam</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="hover:bg-sky-400  bg-white shadow-lg border text-center  py-6 px-5  hover:ring-sky-400 ring-slate-900  rounded-lg hover:-translate-y-4 transition-all duration-300">
+                        <div class="text-gray-700 hover:text-white">
+                            <i class="fa-solid fa-book-open fa-3x mb-4 "></i>
+                            <h3 class="mb-3 text-lg">Book Library</h3>
+                            <p>Diam elitr kased sed at elitr sed ipsum justo dolar sed clita amet diam</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----------About Us---------- -->
+    <section class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2  gap-6 mt-32">
+            <div class=" relative ">
+                <img class="" src="../image/about.jpg" alt="">
+            </div>
+            <div>
+                <h6 class="text-primary font-bold">ABOUT US</h6>
+                <h1 class="mb-4 text-4xl">Welcome to eLEARNING</h1>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                    eos. Clita erat ipsum et lorem et sit.
+                </p>
+                <p class="mb-4">
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+                    ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat ame
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div class="">
+                        <p><i class="fa-solid fa-arrow-right text-primary"></i> Skilled Instructors</p>
+                    </div>
+
+                    <div class="">
+                        <p><i class="fa-solid fa-arrow-right text-primary"></i> Online Classes</p>
+                    </div>
+                    <div class="">
+                        <p><i class="fa-solid fa-arrow-right text-primary"></i> International Certificate</p>
+                    </div>
+
+                    <div class="">
+                        <p><i class="fa-solid fa-arrow-right text-primary"></i> Skilled Instructors</p>
+                    </div>
+
+                    <div class="">
+                        <p><i class="fa-solid fa-arrow-right text-primary"></i> Online Classes</p>
+                    </div>
+
+                    <div class="">
+                        <p><i class="fa-solid fa-arrow-right text-primary "></i> International Certificate</p>
+                    </div>
+                </div>
+                <button class="bg-primary py-5 px-9 mt-5 text-white">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-16">
+
+        <div class="md:grid grid-cols-2 gap-3  space-y-3 md:space-y-0 container mx-auto">
+
+            <div class="md:grid grid-cols-1 gap-3 space-y-3 md:space-y-0">
+
+                <div class="relative overflow-hidden">
+                    <div class=" ">
+                        <img class="ease-in-out delay-150 hover:-translate-y-1    hover:scale-110 duration-300"
+                            src="https://demo.htmlcodex.com/2151/elearning-html-template/img/cat-1.jpg" alt="" />
+                        <div class=" flex justify-end absolute w-[100%] bottom-0 mb-1  ">
+                            <div class=" px-3 py-2 text-black bg-white text-center">
+                                <h3 class="font-bold">Web Development </h3>
+                                <small class="text-primary ">49 Courses</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="md:grid grid-cols-2 gap-1 space-y-3 md:space-y-0 ">
+                    <div class="relative overflow-hidden">
+                        <div class=" ">
+                            <img class="ease-in-out delay-150 hover:-translate-y-1    hover:scale-110 duration-300"
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/cat-2.jpg" alt="" />
+                            <div class=" flex justify-end absolute w-[100%] bottom-0 mb-1  ">
+                                <div class=" px-3 py-2 text-black bg-white text-center">
+                                    <h3 class="font-bold">Graphic Deign</h3>
+                                    <small class="text-primary ">49 Courses</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden">
+                        <div class="">
+                            <img class="ease-in-out delay-150 hover:-translate-y-1    hover:scale-110 duration-300"
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/cat-3.jpg" alt="" />
+                            <div class=" flex justify-end absolute w-[100%] bottom-0 mb-1  ">
+                                <div class=" px-3 py-2 text-black bg-white text-center">
+                                    <h3 class="font-bold">Video Editing</h3>
+                                    <small class="text-primary ">49 Courses</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- main 2nd child  -->
+            <div class="md:grid grid-cols-1 gap-3 space-y-3 md:space-y-0">
+
+                <div class="relative overflow-hidden">
+                    <div class=" p-2">
+                        <img class="ease-in-out delay-150 hover:-translate-y-1    hover:scale-110   duration-300 w-[534px] h-[400px]"
+                            src="https://demo.htmlcodex.com/2151/elearning-html-template/img/cat-4.jpg" alt="" />
+                        <div class=" flex justify-end absolute w-[100%] bottom-0 mb-1  ">
+                            <div class=" px-3 py-2 text-black bg-white text-center">
+                                <h3 class="font-bold">Online Marketing</h3>
+                                <small class="text-primary ">49 Courses</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------Course---------- -->
+    <section class="">
+        <!-- ----Main----- -->
+        <div class="mt-16">
+            <h3 class="text-primary text-center text-3xl line">Course</h3>
+            <h5 class="text-slate-900 text-center text-5xl ">Popular Course</h5>
+        </div>
+        <div class="flex items-center justify-center mt-16 container mx-auto ">
+            <!-- -------GRID---- -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ------CARD----- -->
+
+
+                <div class="md:flex justify-normal items-center px-1">
+                    <div class=" justify-center items-center bg-blue-200">
+                        <div class="relative overflow-hidden ">
+                            <img class=" transition  w-[370px] h-[250px] ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/course-1.jpg" alt="">
+                            <div class=" flex justify-center absolute w-[100%] bottom-0 mb-5 ">
+                                <a href=""
+                                    class=" p-2 text-sm text-white bg-primary rounded-s-full border-e-2 px-3.5">Read
+                                    More</a>
+                                <a href=""
+                                    class="p-2 text-sm text-white bg-primary rounded-e-full flex-shrink px-3.5">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                        <div class="py-2">
+                            <h3 class="py-2 text-center font-bold text-2xl">$149.00</h3>
+                            <a href="#" class="flex justify-center items-center">
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <p class="text-gray-600">(123)</p>
+                            </a>
+                            <h5 class="text-center py-4 font-2xl">Web Design & Development <br>Course for Beginners</h5>
+                        </div>
+
+                        <div class="flex justify-center items-center border-t-2">
+                            <small class="flex-fill text-center border-end py-2 me-5 "><i class="m-2 fa-solid fa-user-tie"
+                                    style="color: #2c7790;"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2 me-5 border-s-2 border-e-2 px-4"><i
+                                    class="fa-solid fa-clock m-1" style="color: #2c7790;"></i>49 Hrs</small>
+                            <small class="flex-fill text-center border-end py-2 me-5"><i class="fa-solid fa-user m-1"
+                                    style="color: #2c7790;"></i>30 Students</small>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="md:flex justify-normal items-center ">
+                    <div class=" justify-center items-center bg-blue-200 ">
+                        <div class="relative overflow-hidden ">
+                            <img class=" transition  w-[370px] h-[250px] ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/course-2.jpg" alt="">
+                            <div class=" flex justify-center absolute w-[100%] bottom-0 mb-5 ">
+                                <a href=""
+                                    class=" p-2 text-sm text-white bg-primary rounded-s-full border-e-2 px-3.5">Read
+                                    More</a>
+                                <a href=""
+                                    class="p-2 text-sm text-white bg-primary rounded-e-full flex-shrink px-3.5">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                        <div class="py-2">
+                            <h3 class="py-2 text-center font-bold text-2xl">$149.00</h3>
+                            <a href="#" class="flex justify-center items-center">
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <p class="text-gray-600">(123)</p>
+                            </a>
+                            <h5 class="text-center font-2xl py-4">Web Design & Development<br>Course for Beginners</h5>
+                        </div>
+                        <hr>
+                        <div class="flex justify-center items-center border-t-2">
+                            <small class="flex-fill text-center border-end py-2 me-5"><i class="fa-solid fa-user-tie m-2 "
+                                    style="color: #2c7790;"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2 me-5 border-s-2 border-e-2 px-4"><i
+                                    class="fa-solid fa-clock m-1 " style="color: #2c7790;"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center border-end py-2 me-5"><i class="fa-solid fa-user m-1"
+                                    style="color: #2c7790;"></i>30 Students</small>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="md:flex justify-center items-center px-1">
+                    <div class="justify-center items-center bg-blue-200">
+                        <div class="relative overflow-hidden ">
+                            <img class=" transition  w-[370px] h-[250px] ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 "
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/course-3.jpg" alt="">
+                            <div class=" flex justify-center absolute w-[100%] bottom-0 mb-5 ">
+                                <a href=""
+                                    class=" p-2 text-sm text-white bg-primary rounded-s-full border-e-2 px-3.5">Read
+                                    More</a>
+                                <a href=""
+                                    class=" p-2 text-sm text-white bg-primary rounded-e-full flex-shrink px-3.5">Join
+                                    Now</a>
+                            </div>
+                        </div>
+                        <div class="py-2">
+                            <h3 class="py-2 text-center font-bold text-2xl">$149.00</h3>
+                            <a href="#" class="flex justify-center items-center">
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <i class="fa-solid fa-star text-primary "></i>
+                                <p class="text-gray-600">(123)</p>
+                            </a>
+                            <h5 class="text-center font-2xl py-4">Web Design & Development<br> Course for Beginners</h5>
+                        </div>
+                        <hr>
+                        <div class="flex justify-center items-center border-t-2">
+                            <small class="flex-fill text-center border-end py-2 me-5"><i class="fa-solid fa-user-tie m-2"
+                                    style="color: #2c7790;"></i>John Do</small>
+                            <small class="flex-fill text-center border-end py-2 me-5 border-s-2 border-e-2 px-4"><i
+                                    class="fa-solid fa-clock m-1" style="color: #2c7790;"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center border-end py-2 me-5"><i class="fa-solid fa-user m-1"
+                                    style="color: #2c7790;"></i>30 Students</small>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------Instructors--------- -->
+    <section class="">
+
+        <div class=" mt-16">
+            <h3 class="text-primary text-center text-2xl">Instructors</h3>
+            <h1 class="text-slate-900 text-center text-4xl">Expert Instructors</h1>
+        </div>
+        <!-- -------GRID---- -->
+        <div class=" flex  items-center justify-center mb-16 mt-16 container mx-auto">
+
+            <!-- ------CARD----- -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+
+                <div class="md:flex justify-between items-center px-2  ">
+                    <div class=" bg-blue-100 ">
+                        <div class=" relative overflow-hidden">
+                            <img class="hover:-translate-y-1 hover:scale-110 duration-300"
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/team-1.jpg" alt="">
+                        </div>
+                        <div class=" relative flex justify-center items-center gap-3 ">
+                            <div class="bg-blue-100 p-3 mt-[-23px] ">
+                                <a href="#"><i class="fa-brands fa-square-facebook fa-2xl text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-twitter fa-2xl  text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram fa-2xl text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h3 class="text-slate-900">Instructor Name</h3>
+                            <p class="text-gray-600">Designation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:flex justify-between items-center px-2 ">
+                    <div class="bg-blue-100">
+                        <div class="relative overflow-hidden">
+                            <img class="hover:-translate-y-1 hover:scale-110 duration-300"
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/team-2.jpg" alt="">
+                        </div>
+                        <div class=" relative flex justify-center items-center gap-3">
+                            <div class="bg-blue-100 p-3 mt-[-23px]">
+                                <a href="#"><i class="fa-brands fa-square-facebook fa-2xl text-primary "></i></a>
+                                <a href="#"><i class="fa-brands fa-square-twitter fa-2xl text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram fa-2xl text-primary"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="text-center py-4">
+                            <h3 class="text-slate-900">Instructor Name</h3>
+                            <p class="text-gray-600">Designation</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="md:flex justify-between items-center px-2 ">
+                    <div class="bg-blue-100">
+                        <div class="relative overflow-hidden">
+                            <img class="hover:-translate-y-1 hover:scale-110 duration-300"
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/team-3.jpg" alt="">
+                        </div>
+                        <div class="relative flex justify-center items-center gap-3">
+                            <div class="bg-blue-100 p-3 mt-[-23px]">
+                                <a href="#"><i class="fa-brands fa-square-facebook fa-2xl text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-twitter fa-2xl text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram fa-2xl text-primary"></i></a>
+
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h3 class="text-slate-900">Instructor Name</h3>
+                            <p class="text-gray-600">Designation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:flex justify-between items-center px-2">
+                    <div class="bg-blue-100">
+                        <div class="relative overflow-hidden">
+                            <img class="hover:-translate-y-1 hover:scale-110 duration-300"
+                                src="https://demo.htmlcodex.com/2151/elearning-html-template/img/team-4.jpg" alt="">
+                        </div>
+                        <div class=" relative flex justify-center items-center gap-3">
+                            <div class="bg-blue-100 p-3 mt-[-23px]">
+                                <a href="#"><i class="fa-brands fa-square-facebook fa-2xl  text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-twitter fa-2xl text-primary"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram fa-2xl text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h3 class="text-slate-900">Instructor Name</h3>
+                            <p class="text-gray-600">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class=" mt-16">
+            <h3 class="text-primary text-center text-2xl">TESTIMONIAL</h3>
+            <h1 class="text-slate-900 text-center text-4xl">Our Students Say!</h1>
+        </div>
+        <!-- -------GRID------ -->
+        <div class="flex items-center justify-center mt-16 container mx-auto mb-60">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="text-center">
+                    <img class="rounded-full mb-3 mx-auto p-2 border ring-1 ring-gray-600"
+                        src="https://demo.htmlcodex.com/2151/elearning-html-template/img/testimonial-1.jpg">
+                    <h2 class="mt-2 text-slate-900 text-3xl text-center">Client Name</h2>
+                    <p class="text-gray-400 mb-3">Professional</p>
+
+                    <div class="text-center p-4 bg-primary text-white">
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Reprehenderit, eveniet quos hic deserunt voluptates odit?
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="text-center">
+                    <img class="rounded-full mb-3 mx-auto p-2 border ring-1 ring-gray-600"
+                        src="https://demo.htmlcodex.com/2151/elearning-html-template/img/testimonial-4.jpg">
+                    <h2 class="mt-2 text-slate-900 text-3xl text-center">Client Name</h2>
+                    <p class="text-gray-400 mb-3">Professional</p>
+
+                    <div class="text-center p-4 bg-primary text-white">
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Reprehenderit, eveniet quos hic deserunt voluptates odit?
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="text-center">
+                    <img class="rounded-full mb-3 mx-auto p-2 border ring-1 ring-gray-600"
+                        src="https://demo.htmlcodex.com/2151/elearning-html-template/img/testimonial-2.jpg">
+                    <h2 class="mt-2 text-slate-900 text-3xl text-center">Client Name</h2>
+                    <p class="text-gray-400 mb-3">Professional</p>
+
+                    <div class="text-center p-4 bg-primary text-white">
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Reprehenderit, eveniet quos hic deserunt voluptates odit?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- --------Footer------- -->
+    <section>
+        <!-- Footer container -->
+        <footer class="flex flex-col items-center bg- dark:bg-gray-900 text-center lg:text-left">
+            <div class="container p-6">
+                <div class="grid place-items-center md:grid-cols-2 lg:grid-cols-3">
+                    <!--First links section-->
+                    <div class="mb-6 text-white">
+                        <h5 class="mb-2.5 font-bold uppercase text-neutral-800 dark:text-neutral-200">
+                            Quick Link
+                        </h5>
+
+                        <ul class="mb-0 list-none">
+                            <li>
+                                <a href="#!" class="text-neutral-800 dark:text-neutral-200">About US</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-neutral-800 dark:text-neutral-200">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-neutral-800 dark:text-neutral-200">Privacy & Condition</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-neutral-800 dark:text-neutral-200">Teams & Condition</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-neutral-800 dark:text-neutral-200">FAQs & Help</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Second links section-->
+                    <div class="mb-6 text-white ">
+                        <h5 class="mb-2.5 font-bold uppercase text-neutral-800 dark:text-neutral-200">
+                            Contact
+                        </h5>
+
+                        <ul class="mb-0 list-none">
+                            <li>
+                                <p class="mt-3">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    123 Street, New York, USA
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mt-2">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +012 345 67890
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mt-2">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    info@example.com
+                                </p>
+                            </li>
+                            <li class="mt-2">
+                                <i class="fa-brands fa-twitter m-1"></i>
+                                <i class="fa-brands fa-facebook m-1"></i>
+                                <i class="fa-brands fa-youtube m-1"></i>
+                                <i class="fa-brands fa-linkedin m-1"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <!--Fourth links section-->
+                    <div class="mb-6 ">
+                        <h3 class="mb-2.5 font-bold uppercase  text-white">
+                            New Seletter
+                        </h3>
+                        <p class="text-white">Dolor amet sit justo amet elitr<br> clita ipsum elitr est</p>
+                        <div class=" mt-2 bg-white">
+                            <input type="text" name="Email" id="Email" placeholder="Your Email"
+                                class="border-none bg-transparent px-4 py-2 text-gray-900 outline-none">
+                            <button class=" bg-sky-400 py-2 px-4 text-white">
+                                SignUP
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Copyright section-->
+            <div class="w-full dark:bg-gray-800 p-4 text-center bg- dark:text-neutral-200">
+                © 2023 Copyright:
+                <a class="text-neutral-800 dark:text-neutral-400" href="https://tailwind-elements.com/">I'm Fucking
+                    Scofield</a>
+            </div>
+        </footer>
+    </section>
+
+</body>
+
+</html>
